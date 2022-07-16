@@ -60,15 +60,27 @@ Size of the data	<4.0 KB>
 
 ## What steps were taken in order to create an applicable data set?
 
-
+The datsets were merge together on common columns to avoid duplication of columns. Cab_Data was merged with Customer_ID on transaction ID.
+The customer Data also contains the unique transaction ID as in Cab data. However, there are 80706 data entries(rows) more in df_customer than the df_cab dataframe. These rows were lost when we merge these dataframes as it would have so many missing values especially the cab company column. This combined data frame was further merged with Transaction_ID dataset on Customer ID column. This combined dataset was further merged with City dataset on City column.
+After merging, feature engineering was done to clean the data and to create new features. The data types of the variables were corrected. 
 
 ## How did you prepare and perform your analysis?
 
+Initially, brainstorming was done and different questions/hypothesis were made regarding the dataset. 
 
 ## What type of analysis did you perform?
+
+Numerical and Categorical Analysis 
+Demand analysis 
+Profit Analysis
+Customer Loyalty Analysis
 
 
 ## Why did you choose to use certain analytical techniques over others?
 
+Since the aim of the EDA was to help XYZ make investment in the more successful company, Demand analysis and Profit analysis over the time period (Time series analysis) is useful to compare the success of the companies. 
+The initial categorical and numerical analysis was performed to give an overall outlook on the market as it is easy and fast to perform.
 
 ## What were the results?
+
+The result showed that the yellow cab dominated the market in terms of demand, profits, customer loyalty etc and hence is the right company to invest in.
